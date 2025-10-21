@@ -4,6 +4,6 @@
 .DS_Store
 /out/
 bin/
-*.add
-*.origin
-*.remote
+add
+git
+remote
