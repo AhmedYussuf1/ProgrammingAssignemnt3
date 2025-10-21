@@ -50,6 +50,7 @@ public class MusicStudio extends RecordStudio {
         if (!super.equals(b)) {
             return false;
         }
-        return this.hasLiveRecording.equals(b.hasLiveRecording);
+        MusicStudio other = (MusicStudio) b;
+        return super.equals(other) && this.hasLiveRecording.equals(other.hasLiveRecording); //compare if both have live recordings
     }
 }

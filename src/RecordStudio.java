@@ -1,8 +1,7 @@
 import javax.swing.plaf.synth.SynthOptionPaneUI;
-
-public class RecordStudio  implements Comparable<RecordStudio>   {
-    private String StudioName ;
-    private Integer  numberOfYearsInOperation;
+public abstract class RecordStudio implements Comparable<RecordStudio> {
+    private String StudioName;
+    private Integer numberOfYearsInOperation;
 
     /**********************************************************************************
      * creates a RecordStudio with the provided arguments                             *
@@ -11,7 +10,7 @@ public class RecordStudio  implements Comparable<RecordStudio>   {
      ***********************************************************************************/
     public RecordStudio(String s, Integer n) {
         StudioName = s;
-        this.numberOfYearsInOperation = n ;
+        this.numberOfYearsInOperation = n;
     }
 
     /**********************************************************************************
@@ -40,7 +39,7 @@ public class RecordStudio  implements Comparable<RecordStudio>   {
 
     @Override
     public String toString() {
-        return  "" + getStudioName() + "\t" +getNumberOfYearsInOperation() + "";
+        return "" + getStudioName() + "\t" + getNumberOfYearsInOperation() + "";
     }
 
     /***************************************************************************
@@ -50,15 +49,17 @@ public class RecordStudio  implements Comparable<RecordStudio>   {
      **************************************************************************/
     @Override
     public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (obj == null) return false;
-        if (!(obj instanceof RecordStudio)) return false;
 
+
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || !(obj instanceof RecordStudio)) {
+            return false;
+        }
         RecordStudio other = (RecordStudio) obj;
         return this.compareTo(other) == 0;
     }
-
-
 
 
     /**************************************************************************
@@ -72,11 +73,11 @@ public class RecordStudio  implements Comparable<RecordStudio>   {
     @Override
     public int compareTo(RecordStudio o) {
 
-        int nameComparison =  this.StudioName.compareToIgnoreCase(o.StudioName);
-        if (nameComparison  != 0) {
+        int nameComparison = this.StudioName.compareToIgnoreCase(o.StudioName);
+        if (nameComparison != 0) {
             return nameComparison;
         }
-        return  this.getNumberOfYearsInOperation().compareTo(o.getNumberOfYearsInOperation());
+        return this.getNumberOfYearsInOperation().compareTo(o.getNumberOfYearsInOperation());
     }
 
 }
