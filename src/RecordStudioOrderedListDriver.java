@@ -4,5 +4,6 @@
         RecordStudio r2 = new RecordStudio("VT" , 33);
          System.out.println(r.compareTo(r2));
          System.out.println(r.equals(r2));
-     }
+         SocialMediaContentStudio s = new SocialMediaContentStudio("wllness", 32, 4);
+         System.out.println(s.toString());     }
  }
