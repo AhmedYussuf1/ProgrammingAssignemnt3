@@ -36,7 +36,7 @@ public class MusicStudio extends RecordStudio {
      *******************************************************************************/
     @Override
     public String toString() {
-        return super.toString() + "\t" + hasLiveRecording;
+        return super.toString() + "\t has live recording :\s" + hasLiveRecording;
     }
 
     /*****************************************************************************
