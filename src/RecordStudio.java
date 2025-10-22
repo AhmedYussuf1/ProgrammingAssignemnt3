@@ -39,7 +39,7 @@ public abstract class RecordStudio implements Comparable<RecordStudio> {
 
     @Override
     public String toString() {
-        return "Name : " + getStudioName() + "\t in operation fo : " + getNumberOfYearsInOperation() + " years";
+        return " " + getStudioName() + "\t" + getNumberOfYearsInOperation()  ;
     }
 
     /***************************************************************************

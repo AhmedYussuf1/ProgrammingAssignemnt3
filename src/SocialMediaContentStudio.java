@@ -24,8 +24,7 @@ public class SocialMediaContentStudio extends RecordStudio {
     @Override
     public String toString() {
         return  super.toString() +
-                "\tnumberOfVideosProduced=" + numberOfVideosProduced +
-                '}';
+                "\t " + numberOfVideosProduced ;
     }
 
     /**
